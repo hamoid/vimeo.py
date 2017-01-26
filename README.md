@@ -146,6 +146,40 @@ v = vimeo.VimeoClient(
 v.upload_texttrack('/videos/12345', 'captions', 'en-US', 'your-texttrack.vtt')
 ```
 
+### Set (replace) tags
+
+```python
+v.set_tags(video_id, ['tag1', 'tag2', 'etc'])
+```
+
+### Set categories
+
+```python
+v.set_categories(video_id, [
+  { "category": "experimental"},
+  { "category": "animation" }
+  ])
+```
+
+### Add to channel
+
+```python
+v.add_to_channel(video_id, channel_id)
+```
+
+### Add credits
+
+```python
+v.add_credit(video_id, "Role", "Name", "e-mail")
+v.add_credit(video_id, "Role", "Name", "e-mail", "user_id")
+```
+
+### Set embed preset
+
+```python
+v.set_embed_preset(video_id, preset_id)
+```
+
 # Legacy Python Library
 
 An earlier version of this library used a more complicated ORM syntax. This library is still available from this github repo via the [orm-tornado](https://github.com/vimeo/vimeo.py/releases/tag/orm-tornado) tag.

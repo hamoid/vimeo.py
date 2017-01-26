@@ -79,6 +79,36 @@ class TexttrackUploadFailure(BaseVimeoException):
         super(TexttrackUploadFailure, self).__init__(response, message)
 
 
+class TagSetFailure(BaseVimeoException):
+
+    def __init__(self, response, message):
+        super(TagSetFailure, self).__init__(response, message)
+
+
+class CategoriesSetFailure(BaseVimeoException):
+
+    def __init__(self, response, message):
+        super(CategoriesSetFailure, self).__init__(response, message)
+
+
+class AddToChannelFailure(BaseVimeoException):
+
+    def __init__(self, response, message):
+        super(AddToChannelFailure, self).__init__(response, message)
+
+
+class AddCreditsFailure(BaseVimeoException):
+
+    def __init__(self, response, message):
+        super(AddCreditsFailure, self).__init__(response, message)
+
+
+class SetEmbedPresetFailure(BaseVimeoException):
+
+    def __init__(self, response, message):
+        super(SetEmbedPresetFailure, self).__init__(response, message)
+
+
 class APIRateLimitExceededFailure(BaseVimeoException):
 
     def _get_message(self, response):
